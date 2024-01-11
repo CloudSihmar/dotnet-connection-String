@@ -1,5 +1,8 @@
+using web.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddTransient<IEmployeeService, EmployeeService>();
 // Add services to the container.
 builder.Services.AddRazorPages();
 

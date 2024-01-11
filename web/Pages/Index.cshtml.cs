@@ -7,12 +7,19 @@ namespace web.Pages
 {
     public class IndexModel : PageModel
     {
+        private readonly IEmployeeService _employeeService;
+
+        public IndexModel(IEmployeeService employeeService)
+        {
+            _employeeService = employeeService;
+        }
         public List<Employees> Employees;
+       
 
         public void OnGet()
         {
-            EmployeeService employeesService = new EmployeeService();
-            Employees = employeesService.GetEmployees();
+       
+            Employees = _employeeService.GetEmployees();
 
         }
 

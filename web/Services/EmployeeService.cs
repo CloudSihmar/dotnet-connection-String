@@ -3,21 +3,17 @@ using web.Models;
 
 namespace web.Services
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
-        private static string db_source = "sandeep-data.database.windows.net";
-        private static string db_user = "admindb";
-        private static string db_password = "Tech@2020";
-        private static string db_database = "appdata";
+        private readonly IConfiguration _configuration;
+        public EmployeeService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         private SqlConnection GetConnection()
         {
-            var _builder = new SqlConnectionStringBuilder();
-            _builder.DataSource = db_source;
-            _builder.UserID = db_user;
-            _builder.Password = db_password;
-            _builder.InitialCatalog = db_database;
-            return new SqlConnection(_builder.ConnectionString);
+            return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
         }
 
         public List<Employees> GetEmployees()

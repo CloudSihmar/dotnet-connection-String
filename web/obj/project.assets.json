@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gagan\\source\\repos\\web\\web\\web.csproj",
+      "projectUniqueName": "C:\\Users\\gagan\\source\\repos\\dotnet-connection-String\\web\\web.csproj",
       "projectName": "web",
-      "projectPath": "C:\\Users\\gagan\\source\\repos\\web\\web\\web.csproj",
+      "projectPath": "C:\\Users\\gagan\\source\\repos\\dotnet-connection-String\\web\\web.csproj",
       "packagesPath": "C:\\Users\\gagan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gagan\\source\\repos\\web\\web\\obj\\",
+      "outputPath": "C:\\Users\\gagan\\source\\repos\\dotnet-connection-String\\web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gagan\\AppData\\Roaming\\NuGet\\NuGet.Config",
